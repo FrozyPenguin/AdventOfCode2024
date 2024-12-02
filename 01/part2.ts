@@ -3,7 +3,7 @@ import * as path from "node:path";
 import { parseInput } from "./utils";
 
 const input = await fs.readFile(
-  path.join(import.meta.dirname, "dataset/input.txt"),
+  path.join(import.meta.dirname, "datasets/input.txt"),
   {
     encoding: "utf-8",
   }
