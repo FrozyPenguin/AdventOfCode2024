@@ -13,15 +13,7 @@ const input = await fs.readFile(
   }
 );
 
-const input2 = await fs.readFile(
-  path.join(import.meta.dirname, "datasets/input2.txt"),
-  {
-    encoding: "utf-8",
-  }
-);
-
 const parsedInput: Array<number[]> = parseNumberInput(input);
-const parsedInput2: Array<number[]> = parseNumberInput(input2);
 `.trim();
 
 const filesToCreate: (
@@ -41,11 +33,6 @@ const filesToCreate: (
   },
   {
     path: "datasets/input.txt",
-    type: "file",
-    data: "",
-  },
-  {
-    path: "datasets/input2.txt",
     type: "file",
     data: "",
   },
