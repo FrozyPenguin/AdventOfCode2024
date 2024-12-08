@@ -51,20 +51,11 @@ for (let y = 0; y < grid.length; y++) {
 const antinodes: Set<string> = new Set<string>();
 for (const [, antennasCoordinates] of antennasByType) {
   const antennas = [...antennasCoordinates];
-  const alignedAntennas: Map<Point, Point[]> = new Map<Point, Point[]>();
 
   while (antennas.length) {
     const antenna = antennas.shift()!;
 
-    const alignedAntennasInformations = antennas.map(
-      (otherAntenna) => otherAntenna
-    );
-
-    alignedAntennas.set(antenna, alignedAntennasInformations);
-  }
-
-  for (const [antenna, otherAntennas] of alignedAntennas) {
-    for (const alignedAntenna of otherAntennas) {
+    for (const alignedAntenna of antennas) {
       const translation1 = antenna.getTranslation(alignedAntenna).inverse();
       const translation2 = alignedAntenna.getTranslation(antenna).inverse();
 
