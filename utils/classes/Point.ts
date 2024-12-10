@@ -52,4 +52,8 @@ export class Point {
       .map((value) => Number.parseInt(value));
     return new Point(x, y);
   }
+
+  isSame(other: Point) {
+    return this._x === other.x && this._y === other.y;
+  }
 }
