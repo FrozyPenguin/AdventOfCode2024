@@ -12,3 +12,7 @@ export function sum(...numbers: number[]): number {
     return accumulator + currentValue;
   }, 0);
 }
+
+export function average(...numbers: number[]): number {
+  return sum(...numbers) / numbers.length;
+}

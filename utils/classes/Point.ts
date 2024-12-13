@@ -1,3 +1,5 @@
+import { average } from "../math";
+
 export class Point {
   constructor(private _x: number, private _y: number) {}
 
@@ -55,5 +57,9 @@ export class Point {
 
   isSame(other: Point) {
     return this._x === other.x && this._y === other.y;
+  }
+
+  average(other: Point) {
+    return new Point(average(this._x, other.x), average(this._y, other.y));
   }
 }
