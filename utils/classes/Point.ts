@@ -66,4 +66,9 @@ export class Point {
   copy() {
     return new Point(this._x, this._y);
   }
+
+  moveTo(point: Point) {
+    this._x = point.x;
+    this._y = point.y;
+  }
 }

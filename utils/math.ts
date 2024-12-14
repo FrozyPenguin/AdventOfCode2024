@@ -16,3 +16,9 @@ export function sum(...numbers: number[]): number {
 export function average(...numbers: number[]): number {
   return sum(...numbers) / numbers.length;
 }
+
+export function multiply(...numbers: number[]): number {
+  return numbers.reduce((accumulator, currentValue) => {
+    return accumulator * currentValue;
+  }, 1);
+}
