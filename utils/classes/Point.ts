@@ -62,4 +62,8 @@ export class Point {
   average(other: Point) {
     return new Point(average(this._x, other.x), average(this._y, other.y));
   }
+
+  copy() {
+    return new Point(this._x, this._y);
+  }
 }
